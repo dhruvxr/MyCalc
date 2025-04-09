@@ -1,22 +1,24 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import NavigationScreen from '../screens/NavigationScreen';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import CalculatorScreen from '../screens/CalculatorScreen';
 import GraphScreen from '../screens/GraphScreen';
 import MeasurementConvertorScreen from '../screens/MeasurementConvertorScreen';
 
-const Stack = createNativeStackNavigator();
+const Drawer = createDrawerNavigator();
 
 export default function AppNavigator() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Calculator" screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="Home" component={NavigationScreen} />
-        <Stack.Screen name="Calculator" component={CalculatorScreen} />
-        <Stack.Screen name="Graph" component={GraphScreen} />
-        <Stack.Screen name="Convertor" component={MeasurementConvertorScreen} />
-      </Stack.Navigator>
+      <Drawer.Navigator initialRouteName="Calculator"
+      screenOptions={{
+       headerShown: false,
+      }}
+      >
+        <Drawer.Screen name="Calculator" component={CalculatorScreen} />
+        <Drawer.Screen name="Graph" component={GraphScreen} />
+        <Drawer.Screen name="Convertor" component={MeasurementConvertorScreen} />
+      </Drawer.Navigator>
     </NavigationContainer>
   );
 }
