@@ -11,7 +11,7 @@ const Stack = createNativeStackNavigator();
 export default function AppNavigator() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
+      <Stack.Navigator initialRouteName="Calculator" screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Home" component={NavigationScreen} />
         <Stack.Screen name="Calculator" component={CalculatorScreen} />
         <Stack.Screen name="Graph" component={GraphScreen} />
