@@ -32,8 +32,8 @@ export default function CalculatorScreen({ navigation }: any) {
       let updatedDisplay = display === '0' ? '' : display;
 
       if (scientificFunctions.includes(value)) {
-        updatedEquation += ${value}(;
-        updatedDisplay += ${value}(;
+       updatedEquation += `${value}(`;
+        updatedDisplay += `${value}(`;
       } else if (value === 'π') {
         updatedEquation += 'π';
         updatedDisplay += 'π';
