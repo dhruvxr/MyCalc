@@ -21,7 +21,7 @@ export default function GraphScreen({ navigation }: any) {
 
   const handlePlot = () => {
     try {
-      const expr = equation.replace(/y\s*=\s*/i, '').toLowerCase(); // remove 'y='
+      const expr = equation.replace(/y\s*=\s*/i, '').toLowerCase(); 
       const points: number[] = [];
       const labels: string[] = [];
 
