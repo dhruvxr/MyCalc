@@ -18,7 +18,7 @@ export default function MeasurementConvertorScreen({ navigation }: any) {
   };
 
   const conversionRates: any = {
-    // All rates to a base unit for conversion (e.g., Meter, Gram, Liter)
+    
     Length: {
       Meter: 1,
       Kilometer: 1000,
@@ -38,7 +38,7 @@ export default function MeasurementConvertorScreen({ navigation }: any) {
     }
   };
 
-  // Update unit options when measurement type changes
+  
   useEffect(() => {
     setUnitOptions(units[measurementType]);
     setInitialUnit('');
@@ -46,7 +46,7 @@ export default function MeasurementConvertorScreen({ navigation }: any) {
     setFinalValue('');
   }, [measurementType]);
 
-  // Perform conversion
+  
   useEffect(() => {
     if (initialValue && initialUnit && finalUnit) {
       const input = parseFloat(initialValue);
