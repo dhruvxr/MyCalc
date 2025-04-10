@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
@@ -32,7 +31,7 @@ export default function CalculatorScreen({ navigation }: any) {
       let updatedDisplay = display === '0' ? '' : display;
 
       if (scientificFunctions.includes(value)) {
-       updatedEquation += `${value}(`;
+        updatedEquation += `${value}(`;
         updatedDisplay += `${value}(`;
       } else if (value === 'π') {
         updatedEquation += 'π';
